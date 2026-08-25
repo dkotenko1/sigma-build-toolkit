@@ -1,0 +1,24 @@
+# Secrets — never commit
+.env
+.env.*
+*.env
+.sigma_token
+*.pem
+
+# vendor/ serves two on-demand caches, both reproducible, neither belongs in git:
+#   - scripts/refresh-vendor.sh mirrors sigmacomputing/sigma-agent-skills here
+#   - scripts/validate-openapi.py caches vendor/sigma-openapi.json (~6 MB)
+vendor/
+
+# OS / editor junk
+.DS_Store
+*.swp
+.idea/
+.vscode/
+
+# Python
+__pycache__/
+*.pyc
+
+# Netlify (plugin hosting — see plugins/HOSTING.md)
+.netlify
